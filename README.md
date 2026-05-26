@@ -4,6 +4,8 @@ Eksamensprojekt (EK - Erhvervsakademiet København, Machine Learning F26, maj 20
 
 **Rapport:** [REPORT.md](REPORT.md) (eller [REPORT.pdf](REPORT.pdf))
 
+**Repo:** https://github.com/Gabel1998/fcm-landmark-detection-exam
+
 ---
 
 ## Resultater (kort)
