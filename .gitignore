@@ -1,0 +1,73 @@
+# Videometer data - ALDRIG i Git pga. NDA
+data/videometer_raw/
+data/videometer_processed/
+*.hips
+*.HIPS
+
+# YOLO-genererede filer
+runs/
+*.pt
+# Tillad pre-trained YOLOv11n KUN i repo-roden (ikke auto-downloadede kopier
+# under scripts/, der opstår når ultralytics henter weights ved første brug)
+!/yolo11n.pt
+# Tillad versionerede trænede modeller under models/
+!models/**/best.pt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Superpowers brainstorming-sessioner (ikke versions-relevante)
+.superpowers/
+
+# AI-assistent instruktioner og lokal state (lokal-only)
+.claude/
+CLAUDE.md
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datasæt-filer der genererer
+dataset/
+*.npy
+*.npz
+
+# Composite-pipeline output — billeder og labels kan regenereres fra config + seed_dir + Belt-baggrunde
+# Vi committer kun data.yaml, generation_metadata.json og preview.png
+data/composite_*/images/
+data/composite_*/labels/
+
+# Andre store datasæt-mapper (kan regenereres fra generator-koden)
+data/clean_v1/
+data/composite_v1_no_leak_1280/
+
+# Tarballs af store datasæt (deles via eksternt link, ikke git)
+*.tar.gz
+
+# Resultater - kan genereres på ny
+*.cache
+
+# Test-billeder til upload-demo (kan regenereres)
+# Undtagelse: 3 composite-testbilleder skal være i repoet til reproducerbar demo
+test_images/*.png
+!test_images/composite_00000.png
+!test_images/composite_00001.png
+!test_images/composite_00002.png
+
+# Intermediær HTML-fil til PDF-eksport (regenereres af scripts/06_markdown_to_html.py)
+REPORT.html
