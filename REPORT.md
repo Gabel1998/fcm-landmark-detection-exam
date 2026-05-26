@@ -4,6 +4,8 @@
 **Machine Learning F26, maj 2026**<br>
 **Forfatter:** Andreas Søgård Gabel
 
+**Repo:** <https://github.com/Gabel1998/fcm-landmark-detection-exam>
+
 ---
 
 ## 1. Problemstilling
