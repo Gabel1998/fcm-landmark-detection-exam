@@ -48,7 +48,14 @@ CSS = """
   strong { color: #111; }
   @media print {
     body { margin: 1.5cm; max-width: none; }
-    h2 { page-break-after: avoid; }
+    /* Hvert nummereret hovedafsnit starter på en frisk side, så rapporten
+       får rene sektionsgrænser i stedet for afsnit der knækker midtover. */
+    h2 { page-break-before: always; page-break-after: avoid; }
+    /* Titelblok og underoverskrifter må aldrig efterlades alene i bunden. */
+    h1, h3 { page-break-after: avoid; }
+    /* Mindst 3 linjer af et afsnit skal følge med over et sideskift. */
+    p, li { orphans: 3; widows: 3; }
+    li { page-break-inside: avoid; }
     table { page-break-inside: avoid; }
     /* Begræns max-højde i print-mode (cm fordi vh ikke virker konsistent
        i print). Letter-side har ~25cm content-område med 1.5cm marginer,
