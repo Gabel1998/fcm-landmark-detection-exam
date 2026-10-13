@@ -14,7 +14,7 @@ Videometer A/S anvender allerede et **eget machine-learning-system** der tager s
 
 Spørgsmålet bag dette projekt — formuleret af Videometer i deres FCM-dokument (FCM = "Frø Center of Mass") — er om en moderne **object-detection-model** kan finde frø-centre direkte i ét enkelt skridt uden at gå vejen om en separat segmentering. Hvis det er muligt, vil pipelinen blive både simplere og potentielt mere robust over for nye optagelsessituationer.
 
-Det oprindelige forslag fra Videometer var en **Fully Convolutional Network (FCN)** der outputter et **heatmap** med frø-centre som peaks, og som evalueres mod ground truth-heatmaps via PSNR. Efter rådgivning fra underviser Jone Eikholm er der i stedet valgt en **YOLOv11n**-baseret tilgang, hvor frø-centre fås som center-of-bbox fra detektionerne. Heatmap-konceptet er bevaret som **interpretability-værktøj** i Streamlit-demoen (se sektion 5) frem for som modellens output.
+Det oprindelige forslag fra Videometer var en **Fully Convolutional Network (FCN)** der outputter et **heatmap** med frø-centre som peaks, og som evalueres mod ground truth-heatmaps via PSNR. Efter rådgivning fra underviser Jon Eikholm er der i stedet valgt en **YOLOv11n**-baseret tilgang, hvor frø-centre fås som center-of-bbox fra detektionerne. Heatmap-konceptet er bevaret som **interpretability-værktøj** i Streamlit-demoen (se sektion 5) frem for som modellens output.
 
 Valget af YOLOv11n skyldes modellens lette form (~5 MB trænede vægte), gode anchor-fri performance på små objekter og kompatibilitet med Apple Silicon (MPS), som har været det primære udviklingsmiljø.
 
