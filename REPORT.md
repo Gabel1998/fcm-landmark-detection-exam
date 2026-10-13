@@ -2,7 +2,7 @@
 
 **Eksamensaflevering — EK - Erhvervsakademiet København**<br>
 **Machine Learning F26, maj 2026**<br>
-**Forfatter:** Andreas Søgård Gabel
+**Forfatter:** Andreas Søgaard Gabel
 
 **Repo:** <https://github.com/Gabel1998/fcm-landmark-detection-exam>
 
